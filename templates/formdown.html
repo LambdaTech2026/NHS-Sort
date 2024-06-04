@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-tch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>LambdaTech</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='downloaded.css') }}">
+
+</head>
+    <body>
+        <div class="container">
+            <div class="image-container">
+                <h1 class="sym">λ</h1>
+                <h2 class="nme">LamdaTech</h2>
+            </div>
+            <img src="static/images/LambdaTech.png" alt="Large Image" class="image">
+            <div class="form-container">
+                <h1 class="tag">Thanks For Using λ</h1>
+                <a class="custom-submit-button" href="/getxlsx">Click to Download</a>
+            </div>
+        </div>
+        <form action="{{ url_for('form') }}" method="get">
+            <button class="form" type="submit">Back</button>
+        </form>
+    </body>
+
+    <script>
+
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr class="l1">
+    <hr class="l2" color=#957849">
+    <a class="cnt" href="mailto:smcs2026.lambdatech@gmail.com">Contact Us</a>
+    <h5 class="cpy">© LambdaTech 2024 - All Rights Reserved</h6>
+</body>
+</html>

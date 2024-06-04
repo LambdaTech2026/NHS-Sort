@@ -16,11 +16,11 @@ def Format(wholeList):
           else:
               value.append(item)
   ViewDict()
-  return "FORMATED.csv"
+  return "FORMATTED.csv"
 
 def ViewDict():
   headers = ["Name (L)", "Name (F)", "Name (F)", "ID"]
-  with open("FORMATED.csv", mode='a') as ret:
+  with open("static/FORMATTED.csv", mode='a') as ret:
     writerObj = writer(ret)
     writerObj.writerow(headers)
     for key, value in dict.items():

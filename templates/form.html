@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-tch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>LambdaTech</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='form.css') }}">
+
+</head>
+    <body>
+        <div class="container">
+            <div class="image-container">
+                <h1 class="sym">λ</h1>
+                <h2 class="nme">LamdaTech</h2>
+            </div>
+            <img src="static/images/LambdaTech.png" alt="Large Image" class="image">
+            <div class="form-container">
+                <h1 class="tag">NHS Teacher Forms</h1>
+                <form action="/teach" method="post" enctype="multipart/form-data">
+                    <div class="custom-file-input-container">
+                        <input type="file" name="file" accept=".xlsx" id="fileInput" class="custom-file-input" onchange="updateFileName()">
+                        <label for="fileInput" id="fileLabel" class="custom-file-label">Choose file</label>
+                    </div>
+                    <input type="submit" value="upload" class="custom-submit-button">
+                </form>
+                <form action="{{ url_for('home') }}" method="get">
+                    <button class="form" type="submit">Student Recommendations</button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        function updateFileName() {
+            var fileInput = document.getElementById('fileInput');
+            var fileLabel = document.getElementById('fileLabel');
+
+            if (fileInput.files.length > 0) {
+                fileLabel.textContent = fileInput.files[0].name;
+            } else {
+                fileLabel.textContent = 'Choose file';
+            }
+        }
+        
+    </script>
+    <br>
+    <hr class="l1">
+    <hr class="l2" color=#957849">
+    <a class="cnt" href="mailto:smcs2026.lambdatech@gmail.com">Contact Us</a>
+    <h5 class="cpy">© LambdaTech 2024 - All Rights Reserved</h6>
+</body>
+</html>
